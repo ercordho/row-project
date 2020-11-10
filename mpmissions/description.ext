@@ -1,0 +1,14 @@
+class CfgFunctions
+{
+	#include "CfgHeaders\Functions.hpp"
+};
+
+class CfgSounds
+{
+	#include "CfgHeaders\Sounds.hpp"
+};
+
+class CfgNotifs
+{
+	#include "CfgHeaders\Notifs.hpp"
+};
