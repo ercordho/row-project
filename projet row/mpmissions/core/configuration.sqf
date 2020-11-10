@@ -1,1 +1,0 @@
-/* Initialiser les variables */
