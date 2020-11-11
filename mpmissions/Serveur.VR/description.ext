@@ -1,14 +1,21 @@
 class CfgFunctions
 {
-	#include "CfgHeaders\Functions.hpp"
+	#include "CfgClient\Functions.hpp"
 };
 
 class CfgSounds
 {
-	#include "CfgHeaders\Sounds.hpp"
+	#include "CfgClient\Sounds.hpp"
 };
 
 class CfgNotifs
 {
-	#include "CfgHeaders\Notifs.hpp"
+	#include "CfgClient\Notifs.hpp"
 };
+
+class Header
+{
+	gameType = "Coop";
+	minPlayers = 1;
+	maxPlayers = 4;
+}

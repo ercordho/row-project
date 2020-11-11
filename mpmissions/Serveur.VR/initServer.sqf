@@ -1,1 +1,1 @@
-[] call compile preprocessFileLineNumbers "row_server\init.sqf";
+[] call compile preprocessFileLineNumbers "\row_server\init.sqf";
