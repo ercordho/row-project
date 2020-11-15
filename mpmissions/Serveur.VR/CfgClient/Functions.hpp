@@ -1,9 +1,9 @@
 class Row_Client
 {
 	tag = "row_client";
-	class Row_medical
+	class Row_Medical
 	{
-		file = "core\medical":
+		file = "core\medical";
 		class DeathScreen{};
 		class PlayerKilled{};
 		class PlayerRespawn{};
@@ -16,9 +16,18 @@ class Row_Client
 		class SetupEventHandler{};
 	};
 
+	class Row_Spawn
+	{
+		file = "core\spawn";
+		class GetSpawnPoints{};
+		class InitSpawnMenu{};
+		class SetMapPos{};
+	};
+
 	class	Row_Utilities
 	{
 		file = "core\utilities";
+		class DisplayHandler{};
 		class SeekNearestUnit{};
-	}
+	};
 };

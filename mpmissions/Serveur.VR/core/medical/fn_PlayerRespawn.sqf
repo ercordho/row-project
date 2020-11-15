@@ -3,18 +3,28 @@ player playMove "AmovPercMstpSnonWnonDnon";
 // Charger l'équipement du joueur pour sa nouvelle vie
 switch (playerSide) do
 {
-	private ["_loadEquipment"];
+	private
+	[
+		"_loadEquipment"
+	];
 
-	case west: {
+	case civilian:
+	{
 		;
 	};
-	case civilian: {
+	case west:
+	{
 		;
 	};
-	case independent: {
+	case east:
+	{
 		;
 	};
-	waitUntil{ scriptDone _loadEquipment };
+	case independent:
+	{
+		;
+	};
+	waitUntil { scriptDone _loadEquipment };
 };
 
 // Destruction de la caméra

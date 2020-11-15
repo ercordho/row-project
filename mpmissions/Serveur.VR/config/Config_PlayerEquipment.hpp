@@ -1,0 +1,7 @@
+class CfgPlayerEquipment
+{
+	class west
+	{
+		;
+	};
+};
