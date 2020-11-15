@@ -4,5 +4,5 @@
 [] call row_client_fnc_SetupEventHandler;
 [] call row_client_fnc_SetupActions;
 [] call compile preprocessFileLineNumbers "core\configuration.sqf";
-
+[] call row_client_fnc_GetSpawnPoints;
 0 cutText["", "BLACK IN"];

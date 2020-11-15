@@ -13,6 +13,8 @@ class CfgNotifs
 	#include "CfgClient\Notifs.hpp"
 };
 
+#include "config\Config_master.hpp"
+
 class Header
 {
 	gameType = "Coop";

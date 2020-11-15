@@ -12,7 +12,7 @@ class Row_Client
 	class Row_Setup
 	{
 		file = "core\setup";
-		class SetupAction{};
+		class SetupActions{};
 		class SetupEventHandler{};
 	};
 
