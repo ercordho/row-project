@@ -3,72 +3,6 @@
 #define	GUI_GRID_CENTER_W		(GUI_GRID_CENTER_WAbs / 40)
 #define	GUI_GRID_CENTER_H		(GUI_GRID_CENTER_HAbs / 25)
 
-
-class Row_RscButtonMenu : Row_RscShortcutButton
-{
-	idc = -1;
-	type = 16;
-	style = "0x02 + 0xC0";
-	default = 0;
-	shadow = 0;
-	x = 0;
-	y = 0;
-	w = 0.095589;
-	h = 0.039216;
-	animTextureNormal = "#(argb,8,8,3)color(1,1,1,1)";
-	animTextureDisabled = "#(argb,8,8,3)color(1,1,1,1)";
-	animTextureOver = "#(argb,8,8,3)color(1,1,1,1)";
-	animTextureFocused = "#(argb,8,8,3)color(1,1,1,1)";
-	animTexturePressed = "#(argb,8,8,3)color(1,1,1,1)";
-	animTextureDefault = "#(argb,8,8,3)color(1,1,1,1)";
-	colorBackground[] = {0, 0, 0, 0.8};
-	colorBackgroundFocused[] = {1, 1, 1, 1};
-	colorBackground2[] = {0.75, 0.75, 0.75, 1};
-	color[] = {1, 1, 1, 1};
-	colorFocused[] = {0, 0, 0, 1};
-	color2[] = {0, 0, 0, 1};
-	colorText[] = {1, 1, 1, 1};
-	colorDisabled[] = {1, 1, 1, 0.25};
-	period = 1.2;
-	periodFocus = 1.2;
-	periodOver = 1.2;
-	size = "(GUI_GRID_CENTER_H * 1)";
-	sizeEx = "(GUI_GRID_CENTER_H * 1)";
-	tooltipColorText[] = {1, 1, 1, 1};
-	tooltipColorBox[] = {1, 1, 1, 1};
-	tooltipColorShade[] = {0, 0, 0, 0.65};
-
-	class TextPos
-	{
-		left = "GUI_GRID_CENTER_W * 0.25";
-		top = "(GUI_GRID_CENTER_H - (GUI_GRID_CENTER_H * 1)) / 2";
-		right = 0.005;
-		bottom = 0.0;
-	};
-
-	class Attributes
-	{
-		font = "RobotoCondensedLight";
-		color = "#E5E5E5";
-		align = "left";
-		shadow = "false";
-	};
-
-	class ShortcutPos
-	{
-		left = "(GUI_GRID_CENTER_W * 6.25) - 0.0225 - 0.005";
-		top = 0.005;
-		w = 0.0225;
-		h = 0.03;
-	};
-
-	soundEnter[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEnter", 0.09, 1};
-	soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundPush", 0.09, 1};
-	soundClick[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundClick", 0.09, 1};
-	soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape", 0.09, 1};
-	textureNoShortcut = "";
-};
-
 class Row_RscShortcutButton
 {
 	idc = -1;
@@ -144,11 +78,69 @@ class Row_RscShortcutButton
 	};
 };
 
-class Row_RscTitle : Row_RscText
+class Row_RscButtonMenu : Row_RscShortcutButton
 {
-	style = 0;
+	idc = -1;
+	type = 16;
+	style = "0x02 + 0xC0";
+	default = 0;
+	shadow = 0;
+	x = 0;
+	y = 0;
+	w = 0.095589;
+	h = 0.039216;
+	animTextureNormal = "#(argb,8,8,3)color(1,1,1,1)";
+	animTextureDisabled = "#(argb,8,8,3)color(1,1,1,1)";
+	animTextureOver = "#(argb,8,8,3)color(1,1,1,1)";
+	animTextureFocused = "#(argb,8,8,3)color(1,1,1,1)";
+	animTexturePressed = "#(argb,8,8,3)color(1,1,1,1)";
+	animTextureDefault = "#(argb,8,8,3)color(1,1,1,1)";
+	colorBackground[] = {0, 0, 0, 0.8};
+	colorBackgroundFocused[] = {1, 1, 1, 1};
+	colorBackground2[] = {0.75, 0.75, 0.75, 1};
+	color[] = {1, 1, 1, 1};
+	colorFocused[] = {0, 0, 0, 1};
+	color2[] = {0, 0, 0, 1};
+	colorText[] = {1, 1, 1, 1};
+	colorDisabled[] = {1, 1, 1, 0.25};
+	period = 1.2;
+	periodFocus = 1.2;
+	periodOver = 1.2;
+	size = "(GUI_GRID_CENTER_H * 1)";
 	sizeEx = "(GUI_GRID_CENTER_H * 1)";
-	colorText[] = {0.95, 0.95, 0.95, 1};
+	tooltipColorText[] = {1, 1, 1, 1};
+	tooltipColorBox[] = {1, 1, 1, 1};
+	tooltipColorShade[] = {0, 0, 0, 0.65};
+
+	class TextPos
+	{
+		left = "GUI_GRID_CENTER_W * 0.25";
+		top = "(GUI_GRID_CENTER_H - (GUI_GRID_CENTER_H * 1)) / 2";
+		right = 0.005;
+		bottom = 0.0;
+	};
+
+	class Attributes
+	{
+		font = "RobotoCondensedLight";
+		color = "#E5E5E5";
+		align = "left";
+		shadow = "false";
+	};
+
+	class ShortcutPos
+	{
+		left = "(GUI_GRID_CENTER_W * 6.25) - 0.0225 - 0.005";
+		top = 0.005;
+		w = 0.0225;
+		h = 0.03;
+	};
+
+	soundEnter[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEnter", 0.09, 1};
+	soundPush[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundPush", 0.09, 1};
+	soundClick[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundClick", 0.09, 1};
+	soundEscape[] = {"\A3\ui_f\data\sound\RscButtonMenu\soundEscape", 0.09, 1};
+	textureNoShortcut = "";
 };
 
 class Row_RscText
@@ -170,6 +162,13 @@ class Row_RscText
 	tooltipColorText[] = {1, 1, 1, 1};
 	tooltipColorBox[] = {1, 1, 1, 1};
 	tooltipColorShade[] = {0, 0, 0, 0.65};
+};
+
+class Row_RscTitle : Row_RscText
+{
+	style = 0;
+	sizeEx = "(GUI_GRID_CENTER_H * 1)";
+	colorText[] = {0.95, 0.95, 0.95, 1};
 };
 
 class Row_RscScrollBar

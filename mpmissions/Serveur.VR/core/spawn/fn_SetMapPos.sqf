@@ -5,10 +5,10 @@ private
 ];
 disableSerialization;
 
-_ctrl = (findDisplay 42000 displayCtrl 42002);
-_selectedIndex = [_this, 1, 0, 1] call BIS_fnc_param;
+_ctrl = findDisplay 42000 displayCtrl 42002;
+_selectedIndex = [_this, 1, 0, [1]] call BIS_fnc_param;
 
 if (isNull _ctrl) exitWith{};
 
-_ctrl ctrlMapAnimAdd[1, 0.1, (getMarkerPos((spawnPoints select _selectedIndex) select 1))];
+_ctrl ctrlMapAnimAdd[1, 0.1, getMarkerPos((spawnPoints select _selectedIndex) select 1)];
 ctrlMapAnimCommit _ctrl;
