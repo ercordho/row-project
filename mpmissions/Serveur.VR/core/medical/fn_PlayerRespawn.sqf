@@ -1,13 +1,14 @@
+private
+[
+	"_loadEquipment"
+];
+disableSerialization;
+
 player playMove "AmovPercMstpSnonWnonDnon";
 
 // Charger l'équipement du joueur pour sa nouvelle vie
 switch (playerSide) do
 {
-	private
-	[
-
-	];
-
 	case civilian:
 	{
 

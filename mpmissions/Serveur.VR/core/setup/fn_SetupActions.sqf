@@ -1,4 +1,4 @@
-playerActions = [];
+_playerActions = [];
 
 switch (playerSide) do {
 	case (civilian):
@@ -18,3 +18,5 @@ switch (playerSide) do {
 
 	};
 };
+
+_playerActions;

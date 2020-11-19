@@ -9,7 +9,6 @@ _seekSide = [_this, 0, sideUnknown, [sideUnknown]] call BIS_fnc_param;
 _radius = [_this, 1, 100, [0]] call BIS_fnc_param;
 _nearestUnitsCount = 0;
 
-
 if (_seekSide isEqualTo sideUnknown) exitWith { false };
 
 {

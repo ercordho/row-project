@@ -7,6 +7,7 @@ disableSerialization;
 
 cutText["","BLACK FADED"];
 0 cutFadeOut 9999999;
+waitUntil{!(isNull findDisplay 46)};
 createDialog "row_spawn_selection";
 _display = findDisplay 42000;
 _display displaySetEventHandler ["keyDown", "_this call row_client_fnc_DisplayHandler"];
