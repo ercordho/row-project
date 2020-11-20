@@ -108,7 +108,6 @@ class CfgBuildings
 				authorizedPos[] = {0, 1, 2, 3, 4, 5, 10, 11, 12, 13};
 				// nbrOfPos = 45;
 			};
-
 		};
 
 		class west
