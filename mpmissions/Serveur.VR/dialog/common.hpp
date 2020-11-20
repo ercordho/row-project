@@ -217,8 +217,8 @@ class Row_RscListNBox
 	autoScrollDelay = 5;
 	autoScrollRewind = 0;
 
-//	class ListScrollBar: Life_RscScrollBar{};
-//	class ScrollBar: Life_RscScrollBar{};
+	class ListScrollBar: Row_RscScrollBar{};
+	class ScrollBar: Row_RscScrollBar{};
 };
 
 class Row_RscMapControl

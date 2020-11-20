@@ -16,7 +16,14 @@ class CfgSpawnPoints
 			class Kavala
 			{
 				displayName = "Kavala";
-				spawnMarker = "weast_spawn_kavala";
+				spawnMarker = "west_spawn_kavala";
+				icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
+			};
+
+			class Attira
+			{
+				displayName = "Attira";
+				spawnMarker = "west_spawn_attira";
 				icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
 			};
 		};
