@@ -6,7 +6,6 @@ class Row_Client
 		file = "core\medical";
 		class DeathScreen{};
 		class PlayerKilled{};
-		class PlayerRespawn{};
 	};
 
 	class Row_Setup
@@ -19,8 +18,10 @@ class Row_Client
 	class Row_Spawn
 	{
 		file = "core\spawn";
+		class GetSpawnPosInBuilding{};
 		class GetSpawnPoints{};
 		class InitSpawnMenu{};
+		class PlayerSpawn{};
 		class SetMapPos{};
 	};
 
@@ -28,6 +29,7 @@ class Row_Client
 	{
 		file = "core\utilities";
 		class DisplayHandler{};
+		class GetBuildingsPos{};
 		class SeekNearestUnit{};
 	};
 };
