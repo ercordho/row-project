@@ -37,7 +37,7 @@ class row_spawn_selection
 			h = (1 / 25);
 		};
 
-		class spawnPointTitle : Title
+		class spawnPointTitle : title
 		{
 			idc = 42001;
 			style = 1;
