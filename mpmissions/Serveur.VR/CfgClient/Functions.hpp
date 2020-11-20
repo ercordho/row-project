@@ -19,6 +19,7 @@ class Row_Client
 	{
 		file = "core\spawn";
 		class GetSpawnPosInBuilding{};
+		class GetSpawnPoints{};
 		class InitSpawnMenu{};
 		class PlayerSpawn{};
 		class SetMapPos{};

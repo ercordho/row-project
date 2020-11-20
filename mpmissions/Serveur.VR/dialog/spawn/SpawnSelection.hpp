@@ -30,7 +30,7 @@ class row_spawn_selection
 		{
 			colorBackground[] = {0,0,0,0};
 			idc = -1;
-			text = "hint str 'menu de spawn'";
+			text = "$STR_Spawn_Spawn";
 			x = 0.1;
 			y = 0.2;
 			w = 0.8;
