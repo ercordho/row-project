@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Row Server">
+	<Package name="Spawn">
+		<Key ID="STR_Spawn_Spawn">
+		    <Original>Confirm</Original>
+            <Czech>Potvrdit</Czech>
+            <French>Confirmer</French>
+            <Spanish>Confirmar</Spanish>
+            <Russian>Chtoby podtverdit</Russian>
+            <Portuguese>Confirmar</Portuguese>
+            <Polish>Potwierdzać</Polish>
+            <Italian>Confermare</Italian>
+            <German>Bestätigen</German>
+		</Key>
+	</Package>
+</Project>

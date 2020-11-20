@@ -80,7 +80,7 @@ class row_spawn_selection
 		{
 			idc = -1;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-			text = "hint str 'spawn'";
+			text = "$STR_Spawn_Spawn";
 	        onButtonClick = "call row_client_fnc_PlayerSpawn";
 			x = 0.11;
 			y = 0.69;
