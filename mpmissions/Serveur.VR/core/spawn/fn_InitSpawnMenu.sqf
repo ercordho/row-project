@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fn_InitSpawnMenu.sqf                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/20 23:26:33 by ercordho          #+#    #+#             */
+/*   Updated: 2020/11/20 23:26:33 by ercordho         ###   ########.fr       */
+/*                                                                            */
+/*   Description :                                                            */
+/*   Initialize the spawn menu.                                               */
+/* ************************************************************************** */
+
 private
 [
 	"_display",
@@ -5,8 +19,6 @@ private
 ];
 disableSerialization;
 
-cutText ["", "BLACK FADED"];
-0 cutFadeOut 9999999;
 waitUntil {!(isNull findDisplay 46)};
 createDialog "row_spawn_selection";
 _display = findDisplay 42000;

@@ -1,6 +1,13 @@
 class Row_Client
 {
 	tag = "row_client";
+
+	class Row_Equipment
+	{
+		AssignPlayerEquipment{};
+		CleanPlayerEquipment{};
+	};
+
 	class Row_Medical
 	{
 		file = "core\medical";

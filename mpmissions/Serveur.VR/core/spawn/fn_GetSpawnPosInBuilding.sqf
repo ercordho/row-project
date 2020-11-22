@@ -1,3 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fn_GetSpawnPosInBuilding.sqf                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/20 23:18:44 by ercordho          #+#    #+#             */
+/*   Updated: 2020/11/20 23:18:46 by ercordho         ###   ########.fr       */
+/*                                                                            */
+/*   Return Value :                                                           */
+/*   Vector3 corresponding to the player's spawn                              */
+/*   location in the nearest building.                                        */
+/* ************************************************************************** */
+
 private
 [
 	"_buildingCfg",

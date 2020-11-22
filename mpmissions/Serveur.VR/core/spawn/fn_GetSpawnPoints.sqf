@@ -1,3 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fn_GetSpawnPoints.sqf                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ercordho <ercordho@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/20 23:10:12 by ercordho          #+#    #+#             */
+/*   Updated: 2020/11/20 23:10:21 by ercordho         ###   ########.fr       */
+/*                                                                            */
+/*   Return Value :                                                           */
+/*   Array composed of the data of each spawn.                                */
+/*   1) spawn name                                                            */
+/*   2) marker name                                                           */
+/*   3) icon path                                                             */
+/* ************************************************************************** */
+
 private
 [
 	"_spawnPoints",
