@@ -25,35 +25,39 @@ _loadout = [];
 /*
 **	Add player gears
 */
-_gears = _playerEquipmentCfg >> "gears";
-if (!((_uniform = getText (_gears >> "uniform")) isEqualTo "")) then { player forceAddUniform _uniform; _loadout pushBack _uniform; };
-if (!((_vest = getText (_gears >> "vest")) isEqualTo "")) then { player addVest _vest; _loadout pushBack _vest; };
-if (!((_backpack = getText (_gears >> "backpack")) isEqualTo "")) then { player addBackpack _backpack; _loadout pushBack _backpack; };
+_uniform = getText (_playerEquipmentCfg >> "gears" >> "uniform")
+_vest = getText (_playerEquipmentCfg >> "gears" >> "vest")
+_backpack = getText (_playerEquipmentCfg >> "gears" >> "backpack")
+
+if (!(_uniform isEqualTo "")) then { player forceAddUniform _uniform; _loadout pushBack _uniform; };
+if (!(_vest isEqualTo "")) then { player addVest _vest; _loadout pushBack _vest; };
+if (!(_backpack isEqualTo "")) then { player addBackpack _backpack; _loadout pushBack _backpack; };
 
 /*
 **	Add player weapons and weapon accessories
 */
-_weapons = _playerEquipmentCfg >> "weapons";
+_weaponItems = getArray(_playerEquipmentCfg >> "weapons" >> "weaponItems");
+for "_i" from 0 to (count (_weaponItems) - 1) do
 {
-	if (!((_weapon = getText (_weapons >> _x)) isEqualTo "")) then
+	_weaponItem = getText (_weaponItems select _i);
+	if (!(_weaponItem isEqualTo "")) then
 	{
-		player addWeapon _weapon;
-		_weaponItemsCfg = _playerEquipmentCfg >> "weaponItems";
+		player addWeapon _weaponItem;
+		_accessoriesItems = getArray (_playerEquipmentCfg >> "weapons" >> "accessoriesItems");
+		if (!(_accessoriesItems isEqualTo [[]])) then
 		{
-			if (!((_weaponItems = getArray (_weaponItemsCfg >> _x)) isEqualTo [])) then
+			for "_j" from 0 to (count ((_accessoriesItems select _i) - 1)) do
 			{
-				for "_i" from 0 to (count (_weaponItems) - 1) do
-				{
-					player addPrimaryWeaponItem (_weaponItems select _i);
-				};
+				player addPrimaryWeaponItem ((_accessoriesItems select _i) select _j);
 			};
-		} forEach _weaponItemsCfg;
+		};
 	};
-} forEach _weapons;
+};
 
 /*
 **	Add player equipment
 */
+/*
 _equipments = _playerEquipmentCfg >> "equipments";
 _i = 0;
 {
@@ -78,3 +82,4 @@ _i = 0;
 	};
 	_i = _i + 1;	
 } forEach _equipments;
+*/

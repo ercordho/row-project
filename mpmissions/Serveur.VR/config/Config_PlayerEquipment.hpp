@@ -21,14 +21,8 @@ class CfgPlayerEquipment
 
 		class weapons
 		{
-			primaryWeapon = "";
-			secondaryWeapon "";
-		};
-
-		class weaponItems
-		{
-			primaryWeaponItems[] = {};
-			secondaryWeaponItems[] = {};
+			weaponItems[] = { "", "", "" };
+			accessoriesItems[] = {{}};
 		};
 
 		class equipments

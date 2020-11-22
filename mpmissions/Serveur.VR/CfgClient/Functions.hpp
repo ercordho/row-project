@@ -4,8 +4,9 @@ class Row_Client
 
 	class Row_Equipment
 	{
-		AssignPlayerEquipment{};
-		CleanPlayerEquipment{};
+		file = "core\equipment";
+		class AssignPlayerEquipment{};
+		class CleanPlayerEquipment{};
 	};
 
 	class Row_Medical
@@ -32,7 +33,7 @@ class Row_Client
 		class SetMapPos{};
 	};
 
-	class	Row_Utilities
+	class Row_Utilities
 	{
 		file = "core\utilities";
 		class DisplayHandler{};
