@@ -25,9 +25,9 @@ _loadout = [];
 /*
 **	Add player gears
 */
-_uniform = getText (_playerEquipmentCfg >> "gears" >> "uniform")
-_vest = getText (_playerEquipmentCfg >> "gears" >> "vest")
-_backpack = getText (_playerEquipmentCfg >> "gears" >> "backpack")
+_uniform = getText (_playerEquipmentCfg >> "gears" >> "uniform");
+_vest = getText (_playerEquipmentCfg >> "gears" >> "vest");
+_backpack = getText (_playerEquipmentCfg >> "gears" >> "backpack");
 
 if (!(_uniform isEqualTo "")) then { player forceAddUniform _uniform; _loadout pushBack _uniform; };
 if (!(_vest isEqualTo "")) then { player addVest _vest; _loadout pushBack _vest; };
@@ -39,7 +39,7 @@ if (!(_backpack isEqualTo "")) then { player addBackpack _backpack; _loadout pus
 _weaponItems = getArray(_playerEquipmentCfg >> "weapons" >> "weaponItems");
 for "_i" from 0 to (count (_weaponItems) - 1) do
 {
-	_weaponItem = getText (_weaponItems select _i);
+	_weaponItem = _weaponItems select _i;
 	if (!(_weaponItem isEqualTo "")) then
 	{
 		player addWeapon _weaponItem;

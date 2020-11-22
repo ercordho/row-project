@@ -21,8 +21,10 @@ class CfgPlayerEquipment
 
 		class weapons
 		{
-			weaponItems[] = { "", "", "" };
-			accessoriesItems[] = {{}};
+			weaponItems[] = { "arifle_MX_F", "hgun_ACPC2_F", "" };
+			accessoriesItems[] = { { "optic_aco", "muzzle_snds_h" },
+									{ "muzzle_snds_L" }
+								};
 		};
 
 		class equipments
