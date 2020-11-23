@@ -11,6 +11,7 @@ class CfgSpawnPoints
 				icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
 			};
 		};
+
 		class west
 		{
 			class Kavala
@@ -27,6 +28,7 @@ class CfgSpawnPoints
 				icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
 			};
 		};
+
 		class east
 		{
 			class Kavala
@@ -36,6 +38,7 @@ class CfgSpawnPoints
 				icon = "\a3\ui_f\data\map\MapControl\watertower_ca.paa";
 			};
 		};
+
 		class independent
 		{
 			class Kavala
