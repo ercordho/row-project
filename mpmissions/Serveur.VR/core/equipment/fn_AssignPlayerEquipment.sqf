@@ -26,15 +26,24 @@ _loadout = [];
 **	Add player gears
 */
 _uniform = getText (_playerEquipmentCfg >> "gears" >> "uniform");
-_loadout pushBack _uniform;
 _vest = getText (_playerEquipmentCfg >> "gears" >> "vest");
-_loadout pushBack _vest;
 _backpack = getText (_playerEquipmentCfg >> "gears" >> "backpack");
+_headGear = getText (_playerEquipmentCfg >> "gears" >> "headGear");
+_goggles = getText (_playerEquipmentCfg >> "gears" >> "goggles");
+_loadout pushBack _uniform;
+_loadout pushBack _vest;
 _loadout pushBack _backpack;
 
 if (!(_uniform isEqualTo "")) then { player forceAddUniform _uniform; };
 if (!(_vest isEqualTo "")) then { player addVest _vest; };
 if (!(_backpack isEqualTo "")) then { player addBackpack _backpack; };
+if (!(_headGear isEqualTo "")) then { player addHeadgear _headGear; };
+if (!(_goggles isEqualTo "")) then { player addGoggles _goggles; };
+
+_items = getArray(_playerEquipmentCfg >> "gears" >> "items");
+{
+	player linkItem _x;
+} forEach _items;
 
 /*
 **	Add player weapons and weapon accessories
@@ -88,9 +97,9 @@ for "_i" from 0 to (count (_loadout) - 1) do
 				{
 					switch (_i) do
 					{
-						case 0: { if (player canAddItemToUniform [_item, _amount]) then { player addItemToUniform _item; };};
-						case 1: { if (player canAddItemToVest [_item, _amount]) then { player addItemToVest _item; };};
-						case 2: { if (player canAddItemToBackpack [_item, _amount]) then { player addItemToBackpack _item; };};
+						case 0: { if (player canAddItemToUniform [_item, 1]) then { player addItemToUniform _item; };};
+						case 1: { if (player canAddItemToVest [_item, 1]) then { player addItemToVest _item; };};
+						case 2: { if (player canAddItemToBackpack [_item, 1]) then { player addItemToBackpack _item; };};
 					};
 				};
 			};

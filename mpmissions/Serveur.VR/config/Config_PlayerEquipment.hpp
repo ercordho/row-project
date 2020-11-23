@@ -37,21 +37,24 @@ class CfgPlayerEquipment
 	{
 		class gears
 		{
-			uniform = "U_OrestesBody";
-			vest = "V_Safety_yellow_F";
-			backpack = "B_FieldPack_blk";
+			uniform = "U_B_CTRG_1";
+			vest = "V_PlateCarrierH_CTRG";
+			backpack = "B_Carryall_cbr";
+			headGear  = "H_HelmetB_Black";
+			goggles = "G_Balaclava_blk";
+			items[] = { "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemsGPS", "NVGoggles" },
 		};
 
 		class weapons
 		{
 			weaponItems[] = { "arifle_MX_F", "", "hgun_ACPC2_F" };
-			accessoriesItems[] = {{ "optic_aco", "muzzle_snds_h", "30Rnd_65x39_caseless_mag" }, { "" }, { "muzzle_snds_acp" }};
+			accessoriesItems[] = {{ "optic_Hamr", "acc_pointer_IR", "30Rnd_65x39_caseless_mag" }, { "" }, { "muzzle_snds_acp" }};
 		};
 
 		class equipments
 		{
 			uniformItems[] = {{}};
-			vestItems[] = {{ "30Rnd_65x39_caseless_mag", 5 };
+			vestItems[] = {{ "30Rnd_65x39_caseless_mag", 5 }};
 			backpackItems[] = {{ "FirstAidKit", 1 }};
 		};
 	};
