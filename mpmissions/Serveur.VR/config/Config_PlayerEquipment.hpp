@@ -48,14 +48,14 @@ class CfgPlayerEquipment
 		class weapons
 		{
 			weaponItems[] = { "arifle_MX_F", "", "hgun_ACPC2_F" };
-			accessoriesItems[] = {{ "optic_Hamr", "acc_pointer_IR", "30Rnd_65x39_caseless_mag" }, { "" }, { "muzzle_snds_acp" }};
+			accessoriesItems[] = {{ "optic_Hamr", "acc_pointer_IR", "30Rnd_65x39_caseless_mag" }, { "" }, { "9Rnd_45ACP_Mag", "muzzle_snds_acp" }};
 		};
 
 		class equipments
 		{
 			uniformItems[] = {{}};
-			vestItems[] = {{ "30Rnd_65x39_caseless_mag", 5 }};
-			backpackItems[] = {{ "FirstAidKit", 1 }};
+			vestItems[] = {{ "30Rnd_65x39_caseless_mag", 5 }, { "9Rnd_45ACP_Mag", 3 }};
+			backpackItems[] = {{ "FirstAidKit", 2 }};
 		};
 	};
 
