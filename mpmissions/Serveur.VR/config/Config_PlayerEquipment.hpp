@@ -46,7 +46,7 @@ class CfgPlayerEquipment
 							};
 
 			accessoriesItems[] = {
-									{ "optic_aco", "muzzle_snds_h" },
+									{ "optic_aco", "muzzle_snds_h", "30Rnd_65x39_caseless_mag" },
 									{ "" },
 									{ "muzzle_snds_acp" }
 								};
@@ -63,6 +63,7 @@ class CfgPlayerEquipment
 						};
 
 			backpackItems[] = {
+								{ "30Rnd_65x39_caseless_mag", 5 },
 								{ "FirstAidKit", 1 }
 							};
 		};

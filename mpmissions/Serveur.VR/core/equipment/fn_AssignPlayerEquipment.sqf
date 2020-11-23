@@ -79,18 +79,19 @@ for "_i" from 0 to (count (_loadout) - 1) do
 			case 2: { "backpackItems" };
 		};
 		_equipments = getArray (_playerEquipmentCfg >> "equipments" >> _equipments);
-		_length = count (_equipments);
-		for "_j" from 0 to (_length - 1) do
+		for "_j" from 0 to (count (_equipments) - 1) do
 		{
 			if (!((_equipments select _j) isEqualTo [])) then
 			{
 				_item = (_equipments select _j) select 0;
-				_amount = (_equipments select _j) select 1;
-				switch (_i) do
+				for "_k" from 0 to (((_equipments select _j) select 1) - 1) do
 				{
-					case 0: { if (player canAddItemToUniform [_item, _amount]) then { player addItemToUniform _item; };};
-					case 1: { if (player canAddItemToVest [_item, _amount]) then { player addItemToVest _item; };};
-					case 2: { if (player canAddItemToBackpack [_item, _amount]) then { player addItemToBackpack _item; };};
+					switch (_i) do
+					{
+						case 0: { if (player canAddItemToUniform [_item, _amount]) then { player addItemToUniform _item; };};
+						case 1: { if (player canAddItemToVest [_item, _amount]) then { player addItemToVest _item; };};
+						case 2: { if (player canAddItemToBackpack [_item, _amount]) then { player addItemToBackpack _item; };};
+					};
 				};
 			};
 		};
