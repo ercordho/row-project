@@ -55,7 +55,7 @@ for "_i" from 0 to (count (_weaponItems) - 1) do
 				{
 					case 0: { player addPrimaryWeaponItem ((_accessoriesItems select _i) select _j); };
 					case 1: { player addSecondaryWeaponItem ((_accessoriesItems select _i) select _j); };
-					case 1: { player addHandgunItem ((_accessoriesItems select _i) select _j); };
+					case 2: { player addHandgunItem ((_accessoriesItems select _i) select _j); };
 				};
 			};
 		};
@@ -64,29 +64,31 @@ for "_i" from 0 to (count (_weaponItems) - 1) do
 
 /*
 **	Add player equipment
-**	secure with canAddItemToBackpack ?
 */
 for "_i" from 0 to (count (_loadout) - 1) do
 {
 	if (!((_loadout select _i) isEqualTo "")) then
 	{
-		switch (_i) do
+		_equipments = switch (_i) do
 		{
-			case 0: { _equipments = "uniformItems"; };
-			case 1: { _equipments = "vestItems"; };
-			case 2: { _equipments = "backpackItems"; };
+			case 0: { "uniformItems" };
+			case 1: { "vestItems" };
+			case 2: { "backpackItems" };
 		};
-		_equipments = getArray(_playerEquipmentCfg >> "equipments" >> _equipments);
-		length = count (_equipments);
-		for "_j" from 0 to (lenght - 1) do
+		_equipments = getArray (_playerEquipmentCfg >> "equipments" >> _equipments);
+		_length = count (_equipments);
+		for "_j" from 0 to (_length - 1) do
 		{
-			_item = ((_equipments select _j) select 0);
-			amount = getNumber((_equipments select _j) select 1);
-			switch (_i) do
+			if (!((_equipments select _j) isEqualTo [])) then
 			{
-				case 0: { if (player canAddItemToUniform [_item, amount]) then { player addItemToUniform _item;}; };
-				case 1: { if (player canAddItemToVest [_item, amount]) then { player addItemToVest _item;}; };
-				case 2: { if (player canAddItemToBackpack [_item, amount]) then { player addItemToBackpack _item;}; };
+				_item = (_equipments select _j) select 0;
+				_amount = (_equipments select _j) select 1;
+				switch (_i) do
+				{
+					case 0: { if (player canAddItemToUniform [_item, _amount]) then { player addItemToUniform _item; };};
+					case 1: { if (player canAddItemToVest [_item, _amount]) then { player addItemToVest _item; };};
+					case 2: { if (player canAddItemToBackpack [_item, _amount]) then { player addItemToBackpack _item; };};
+				};
 			};
 		};
 	};

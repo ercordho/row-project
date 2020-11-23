@@ -63,7 +63,7 @@ class CfgPlayerEquipment
 						};
 
 			backpackItems[] = {
-								{"FirstAidKit", 1}
+								{ "FirstAidKit", 1 }
 							};
 		};
 	};
