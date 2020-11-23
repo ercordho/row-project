@@ -42,7 +42,7 @@ class CfgPlayerEquipment
 			backpack = "B_Carryall_cbr";
 			headGear  = "H_HelmetB_Black";
 			goggles = "G_Balaclava_blk";
-			items[] = { "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemsGPS", "NVGoggles" },
+			items[] = { "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles" };
 		};
 
 		class weapons
