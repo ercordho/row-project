@@ -40,22 +40,25 @@ if (!(_backpack isEqualTo "")) then { player addBackpack _backpack; };
 **	Add player weapons and weapon accessories
 */
 _weaponItems = getArray(_playerEquipmentCfg >> "weapons" >> "weaponItems");
-for "_i" from 0 to (count (_weaponItems) - 1) do
+if (count (_weaponItems) - 1 isEqualTo 2) then
 {
-	_weaponItem = _weaponItems select _i;
-	if (!(_weaponItem isEqualTo "")) then
+	for "_i" from 0 to (count (_weaponItems) - 1) do
 	{
-		player addWeapon _weaponItem;
-		_accessoriesItems = getArray (_playerEquipmentCfg >> "weapons" >> "accessoriesItems");
-		if (!(_accessoriesItems isEqualTo [[]])) then
+		_weaponItem = _weaponItems select _i;
+		if (!(_weaponItem isEqualTo "")) then
 		{
-			for "_j" from 0 to (count (_accessoriesItems select _i) - 1) do
+			player addWeapon _weaponItem;
+			_accessoriesItems = getArray (_playerEquipmentCfg >> "weapons" >> "accessoriesItems");
+			if (!(_accessoriesItems isEqualTo [[]])) then
 			{
-				switch (_i) do
+				for "_j" from 0 to (count (_accessoriesItems select _i) - 1) do
 				{
-					case 0: { player addPrimaryWeaponItem ((_accessoriesItems select _i) select _j); };
-					case 1: { player addSecondaryWeaponItem ((_accessoriesItems select _i) select _j); };
-					case 2: { player addHandgunItem ((_accessoriesItems select _i) select _j); };
+					switch (_i) do
+					{
+						case 0: { player addPrimaryWeaponItem ((_accessoriesItems select _i) select _j); };
+						case 1: { player addSecondaryWeaponItem ((_accessoriesItems select _i) select _j); };
+						case 2: { player addHandgunItem ((_accessoriesItems select _i) select _j); };
+					};
 				};
 			};
 		};
