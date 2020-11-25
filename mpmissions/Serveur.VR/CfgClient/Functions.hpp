@@ -7,6 +7,7 @@ class Row_Client
 		file = "core\equipment";
 		class AssignPlayerEquipment{};
 		class CleanPlayerEquipment{};
+		class SavePlayerEquipment{};
 	};
 
 	class Row_Medical

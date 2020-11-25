@@ -19,7 +19,9 @@ private
 ];
 disableSerialization;
 
-_playerEquipmentCfg = missionConfigFile >> "CfgPlayerEquipment" >> str(playerSide);
+[] call row_client_fnc_CleanPlayerEquipment;
+
+_playerEquipmentCfg = missionConfigFile >> "CfgPlayerEquipment" >> str (playerSide);
 
 _uniform = getText (_playerEquipmentCfg >> "gears" >> "uniform");
 _vest = getText (_playerEquipmentCfg >> "gears" >> "vest");
@@ -40,38 +42,34 @@ if (!(_goggles isEqualTo "")) then { player addGoggles _goggles; };
 
 // tester avec _items = [];
 _items = getArray (_playerEquipmentCfg >> "gears" >> "items");
-{
-	player linkItem _x;
-} forEach _items;
+{ player linkItem _x; } forEach _items;
 
 _weaponItems = getArray (_playerEquipmentCfg >> "weapons" >> "weaponItems");
 if (count (_weaponItems) isEqualTo 3) then
 {
-	for "_i" from 0 to (2) do
+	_i = 0;
 	{
-		_weaponItem = _weaponItems select _i;
-		if (!(_weaponItem isEqualTo "")) then
+		if (!(_x isEqualTo "")) then
 		{
-			player addWeapon _weaponItem;
+			player addWeapon _x;
 			_accessoriesItems = getArray (_playerEquipmentCfg >> "weapons" >> "accessoriesItems");
 			if (count (_accessoriesItems) isEqualTo 3)) then
 			{
-				for "_j" from 0 to (2) do
 				{
-					_accessoryItem = (_accessoriesItems select _i) select _j;
-					if (!(_accessoryItem isEqualTo ""))
+					if (!(_x isEqualTo "")) then
 					{
 						switch (_i) do
 						{
-							case 0: { player addPrimaryWeaponItem _accessoryItem; };
-							case 1: { player addSecondaryWeaponItem _accessoryItem; };
-							case 2: { player addHandgunItem _accessoryItem; };
+							case 0: { player addPrimaryWeaponItem _x; };
+							case 1: { player addSecondaryWeaponItem _x; };
+							case 2: { player addHandgunItem _x; };
 						};
 					};
-				};
+				} forEach _accessoriesItems;
 			};
 		};
-	};
+		_i = _i + 1;
+	} forEach _weaponItems;
 };
 
 for "_i" from 0 to (count (_loadout) - 1) do
