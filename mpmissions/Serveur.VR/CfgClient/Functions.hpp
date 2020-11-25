@@ -14,7 +14,7 @@ class Row_Client
 	{
 		file = "core\medical";
 		class DeathScreen{};
-		class PlayerKilled{};
+		class onPlayerKilled{};
 	};
 
 	class Row_Setup
@@ -30,7 +30,7 @@ class Row_Client
 		class GetSpawnPosInBuilding{};
 		class GetSpawnPoints{};
 		class InitSpawnMenu{};
-		class PlayerSpawn{};
+		class onPlayerRespawn{};
 		class SetMapPos{};
 	};
 

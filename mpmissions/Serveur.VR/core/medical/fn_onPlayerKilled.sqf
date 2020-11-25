@@ -28,4 +28,4 @@ deathCamera camSetFOV .5;
 deathCamera camSetFocus [50,0];
 deathCamera camCommit 0;
 
-(findDisplay 7300) displaySetEventHandler ["keyDown", "_this call row_client_fnc_DisplayHandler"];
+(findDisplay 43000) displaySetEventHandler ["keyDown", "_this call row_client_fnc_DisplayHandler"];
