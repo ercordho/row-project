@@ -6,19 +6,15 @@ params
 ];
 disableSerialization;
 
-if  !((vehicle player) isEqualTo player) then
+if (!((vehicle player) isEqualTo player)) then
 {
     UnAssignVehicle player;
     player action ["getOut", vehicle player];
     player setPosATL [(getPosATL player select 0) + 3, (getPosATL player select 1) + 1, 0];
 };
 
-//Set some vars
-player setVariable ["Revive",true,true];
-
 if (dialog) then { closeDialog 0; };
 
-//Setup our camera view
 deathCamera = "CAMERA" camCreate (getPosATL player);
 showCinemaBorder true;
 deathCamera cameraEffect ["Internal","Back"];

@@ -4,5 +4,6 @@ if (!(objNull deathCamera)) then
 	camDestroy deathCamera;
 };
 
-if (!isNull bodyLists) then { deleteVehicle bodyLists; };
+if (!isNull corpse) then { deleteVehicle corpse; };
+
 player playMove "AmovPercMstpSnonWnonDnon";
