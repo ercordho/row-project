@@ -56,9 +56,9 @@ if (count (_weaponItems) isEqualTo 3) then
 			_accessoriesItems = getArray (_playerEquipmentCfg >> "weapons" >> "accessoriesItems");
 			if (count (_accessoriesItems) isEqualTo 3) then
 			{
-				for "_j" from 0 to (2) do
+				for "_j" from 0 to (count (_accessoriesItems select _i) - 1) do
 				{
-					_accessoriesItem = _accessoriesItems select _j;
+					_accessoriesItem = (_accessoriesItems select _i) select _j;
 					if (!(_accessoriesItem isEqualTo "")) then
 					{
 						switch (_i) do
