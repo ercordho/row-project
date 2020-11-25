@@ -30,7 +30,7 @@ class Row_Client
 		class GetSpawnPosInBuilding{};
 		class GetSpawnPoints{};
 		class InitSpawnMenu{};
-		class onPlayerRespawn{};
+		class PlayerSpawn{};
 		class SetMapPos{};
 	};
 
