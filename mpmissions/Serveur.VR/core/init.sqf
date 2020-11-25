@@ -7,7 +7,6 @@ waitUntil {!isNull player && player == player};
 
 [] call compile preprocessFileLineNumbers "core\configuration.sqf";
 [] call row_client_fnc_InitSpawnMenu;
-[] call row_client_fnc_AssignPlayerEquipment;
 
 waitUntil {!isNull findDisplay 42000};
 waitUntil {isNull findDisplay 42000};

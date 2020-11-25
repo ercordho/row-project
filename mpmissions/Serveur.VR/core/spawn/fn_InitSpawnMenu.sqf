@@ -19,6 +19,9 @@ private
 ];
 disableSerialization;
 
+[] call row_client_fnc_AssignPlayerEquipment;
+[] call row_client_fnc_PlayerRespawn;
+
 waitUntil {!(isNull findDisplay 46)};
 createDialog "row_spawn_selection";
 _display = findDisplay 42000;
