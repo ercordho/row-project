@@ -19,6 +19,8 @@ private
 ];
 disableSerialization;
 
+0 cutText ["", "BLACK FADED", 99999999];
+
 [perk] call row_client_fnc_AssignPlayerEquipment;
 
 [] call row_client_fnc_PlayerRespawn;

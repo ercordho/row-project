@@ -28,8 +28,8 @@ _spawnCfg = missionConfigFile >> "CfgSpawnPoints" >> worldName >> str (playerSid
 for "_i" from 0 to (count (_spawnCfg) - 1) do
 {
 	private _tmpCfg = [];
-	private _condition = _spawnCfg >> getText ((_spawnCfg select _i) >> "condition");
-	private _check = [_condition] call row_client_levelCheck;
+	private _condition = getText ((_spawnCfg select _i) >> "condition");
+	private _check = [_condition] call row_client_fnc_levelCheck;
 
 	if (_check) then
 	{

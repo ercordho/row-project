@@ -19,7 +19,8 @@ private
 ];
 disableSerialization;
 
-if (!(perk isEqualTo (_this select 0))) then { perk = _this select 0; };
+_newPerk = _this select 0;
+if (!(perk isEqualTo _newPerk)) then { perk = _newPerk; };
 
 [] call row_client_fnc_CleanPlayerEquipment;
 
