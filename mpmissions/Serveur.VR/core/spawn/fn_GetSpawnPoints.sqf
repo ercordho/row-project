@@ -29,8 +29,9 @@ for "_i" from 0 to (count (_spawnCfg) - 1) do
 {
 	private _tmpCfg = [];
 	private _condition = _spawnCfg >> getText ((_spawnCfg select _i) >> "condition");
+	private _check = [_condition] call row_client_levelCheck;
 
-	if ([_condition] call row_client_levelCheck) then
+	if (_check) then
 	{
 		_tmpCfg pushBack getText ((_spawnCfg select _i) >> "displayName");
 		_tmpCfg pushBack getText ((_spawnCfg select _i) >> "spawnMarker");
