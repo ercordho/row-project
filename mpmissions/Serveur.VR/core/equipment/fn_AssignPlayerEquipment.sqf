@@ -19,9 +19,11 @@ private
 ];
 disableSerialization;
 
+if (!(perk isEqualTo _this select 0)) then { perk = _this select 0; };
+
 [] call row_client_fnc_CleanPlayerEquipment;
 
-_playerEquipmentCfg = missionConfigFile >> "CfgPlayerEquipment" >> str(playerSide);
+_playerEquipmentCfg = missionConfigFile >> "CfgPlayerEquipment" >> str(playerSide) >> perk;
 
 _uniform = getText (_playerEquipmentCfg >> "gears" >> "uniform");
 _vest = getText (_playerEquipmentCfg >> "gears" >> "vest");

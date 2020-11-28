@@ -40,6 +40,7 @@ class Row_Client
 	{
 		file = "core\utilities";
 		class DisplayHandler{};
+		class levelCheck{};
 		class SeekNearestUnit{};
 	};
 };

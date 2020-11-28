@@ -17,6 +17,8 @@ class CfgNotifs
 #include "dialog\MasterHandler.hpp"
 #include "config\Config_master.hpp"
 
+respawnDelay = 5;
+
 class Header
 {
 	gameType = "Coop";

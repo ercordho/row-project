@@ -3,6 +3,15 @@
 #define	GUI_GRID_CENTER_W		(GUI_GRID_CENTER_WAbs / 40)
 #define	GUI_GRID_CENTER_H		(GUI_GRID_CENTER_HAbs / 25)
 
+import RscText;
+import RscTitle;
+import RscButton;
+import RscShortcutButton;
+import RscButtonMenu;
+import RscScrollBar;
+import RscListNBox;
+import RscMapControl;
+
 class Row_RscShortcutButton
 {
 	idc = -1;

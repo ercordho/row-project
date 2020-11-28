@@ -28,11 +28,15 @@ _spawnCfg = missionConfigFile >> "CfgSpawnPoints" >> worldName >> str (playerSid
 for "_i" from 0 to (count (_spawnCfg) - 1) do
 {
 	private _tmpCfg = [];
+	private _condition = _spawnCfg >> getText ((_spawnCfg select _i) >> "condition");
 
-	_tmpCfg pushBack getText ((_spawnCfg select _i) >> "displayName");
-	_tmpCfg pushBack getText ((_spawnCfg select _i) >> "spawnMarker");
-	_tmpCfg pushBack getText ((_spawnCfg select _i) >> "icon");
-	_spawnPoints pushBack _tmpCfg;
+	if ([_condition] call row_client_levelCheck) then
+	{
+		_tmpCfg pushBack getText ((_spawnCfg select _i) >> "displayName");
+		_tmpCfg pushBack getText ((_spawnCfg select _i) >> "spawnMarker");
+		_tmpCfg pushBack getText ((_spawnCfg select _i) >> "icon");
+		_spawnPoints pushBack _tmpCfg;
+	};
 };
 
 _spawnPoints;
