@@ -17,96 +17,15 @@ private
 	"_playerEquipmentCfg",
 	"_loadout"
 ];
-disableSerialization;
+
+_playerEquipmentCfg = missionConfigFile >> "CfgPlayerEquipment" >> str (playerSide) >> perk;
+
+// Vérifier si la config existe
 
 _newPerk = _this select 0;
 if (!(perk isEqualTo _newPerk)) then { perk = _newPerk; };
 
 [] call row_client_fnc_CleanPlayerEquipment;
-
-_playerEquipmentCfg = missionConfigFile >> "CfgPlayerEquipment" >> str(playerSide) >> perk;
-
-_uniform = getText (_playerEquipmentCfg >> "gears" >> "uniform");
-_vest = getText (_playerEquipmentCfg >> "gears" >> "vest");
-_backpack = getText (_playerEquipmentCfg >> "gears" >> "backpack");
-_headGear = getText (_playerEquipmentCfg >> "gears" >> "headGear");
-_goggles = getText (_playerEquipmentCfg >> "gears" >> "goggles");
-
-_loadout = [];
-_loadout pushBack _uniform;
-_loadout pushBack _vest;
-_loadout pushBack _backpack;
-
-if (!(_uniform isEqualTo "")) then { player forceAddUniform _uniform; };
-if (!(_vest isEqualTo "")) then { player addVest _vest; };
-if (!(_backpack isEqualTo "")) then { player addBackpack _backpack; };
-if (!(_headGear isEqualTo "")) then { player addHeadgear _headGear; };
-if (!(_goggles isEqualTo "")) then { player addGoggles _goggles; };
-
-// tester avec _items = [];
-_items = getArray (_playerEquipmentCfg >> "gears" >> "items");
-{ player linkItem _x; } forEach _items;
-
-_weaponItems = getArray (_playerEquipmentCfg >> "weapons" >> "weaponItems");
-if (count (_weaponItems) isEqualTo 3) then
-{
-	for "_i" from 0 to (2) do
-	{
-		_weaponItem = _weaponItems select _i;
-		if (!(_weaponItem isEqualTo "")) then
-		{
-			player addWeapon _weaponItem;
-			_accessoriesItems = getArray (_playerEquipmentCfg >> "weapons" >> "accessoriesItems");
-			if (count (_accessoriesItems) isEqualTo 3) then
-			{
-				for "_j" from 0 to (count (_accessoriesItems select _i) - 1) do
-				{
-					_accessoriesItem = (_accessoriesItems select _i) select _j;
-					if (!(_accessoriesItem isEqualTo "")) then
-					{
-						switch (_i) do
-						{
-							case 0: { player addPrimaryWeaponItem _accessoriesItem; };
-							case 1: { player addSecondaryWeaponItem _accessoriesItem; };
-							case 2: { player addHandgunItem _accessoriesItem; };
-						};
-					};
-				};
-			};
-		};
-	};
-};
-
-for "_i" from 0 to (count (_loadout) - 1) do
-{
-	if (!((_loadout select _i) isEqualTo "")) then
-	{
-		_equipments = switch (_i) do
-		{
-			case 0: { "uniformItems" };
-			case 1: { "vestItems" };
-			case 2: { "backpackItems" };
-		};
-		_equipments = getArray (_playerEquipmentCfg >> "equipments" >> _equipments);
-		for "_j" from 0 to (count (_equipments) - 1) do
-		{
-			if (count (_equipments select _j) isEqualTo 2) then
-			{
-				_item = (_equipments select _j) select 0;
-				_amout = (_equipments select _j) select 1;
-				if (!(_item isEqualTo "") || _amout > 0) then
-				{
-					for "_k" from 0 to (_amout - 1) do
-					{
-						switch (_i) do
-						{
-							case 0: { if (player canAddItemToUniform [_item, 1]) then { player addItemToUniform _item; };};
-							case 1: { if (player canAddItemToVest [_item, 1]) then { player addItemToVest _item; };};
-							case 2: { if (player canAddItemToBackpack [_item, 1]) then { player addItemToBackpack _item; };};
-						};
-					};
-				};
-			};
-		};
-	};
-};
+_loadout = [_playerEquipmentCfg] call row_client_row_fnc_AssignPlayerGears;
+[] call row_client_fnc_AssignPlayerWeapons;
+[_playerEquipmentCfg, _loadout] call row_client_fnc_AssignPlayerItems;

@@ -1,4 +1,4 @@
-//waitUntil { isServer == false && !isNull player && player isEqualTo player };
+//waitUntil { !isServer && !isNull player && player isEqualTo player };
 
 //if (player diarySubjectExists "controls") exitWith{};
 

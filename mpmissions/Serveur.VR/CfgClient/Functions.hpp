@@ -6,6 +6,9 @@ class Row_Client
 	{
 		file = "core\equipment";
 		class AssignPlayerEquipment{};
+		class AssignPlayerGears{};
+		class AssignPlayerItems{};
+		class AssignPlayerWeapons{};
 		class CleanPlayerEquipment{};
 		class SavePlayerEquipment{};
 	};
@@ -28,7 +31,6 @@ class Row_Client
 	class Row_Spawn
 	{
 		file = "core\spawn";
-		class GetSpawnPosInBuilding{};
 		class GetSpawnPoints{};
 		class InitSpawnMenu{};
 		class PlayerRespawn{};

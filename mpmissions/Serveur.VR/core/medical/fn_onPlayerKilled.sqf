@@ -1,10 +1,9 @@
 // gérer la gestion de l'écran de mort
-params
+private
 [
     ["_unit", objNull, [objNull]],
     ["_killer", objNull, [objNull]]
 ];
-disableSerialization;
 
 if (!((vehicle _unit) isEqualTo _unit)) then
 {

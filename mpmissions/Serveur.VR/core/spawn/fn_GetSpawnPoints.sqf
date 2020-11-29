@@ -20,7 +20,6 @@ private
 	"_spawnPoints",
 	"_spawnCfg"
 ];
-disableSerialization;
 
 _spawnPoints = [];
 _spawnCfg = missionConfigFile >> "CfgSpawnPoints" >> worldName >> str (playerSide);

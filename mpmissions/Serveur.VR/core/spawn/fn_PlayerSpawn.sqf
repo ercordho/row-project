@@ -15,17 +15,22 @@
 private
 [
 	"_index",
+	"_markerPos",
 	"_building",
-	"_spawnPos",
-	"_loadEquipment"
+	"_buildingCfg",
+	"_authorizedPos",
+	"_spawnPos"
 ];
-disableSerialization;
 
 _index = lnbCurSelRow ((findDisplay 42000) displayCtrl 42003);
 closeDialog 0;
+
 0 cutText ["", "BLACK IN"];
 
-_building = nearestObjects [getMarkerPos((spawnPoints select _index) select 1), ["House_F"], 50] select 0;
-_spawnPos = [_building] call row_client_fnc_GetSpawnPosInBuilding;
+_markerPos = getMarkerPos((spawnPoints select _index) select 1);
+_building = nearestObjects [_markerPos, ["House_F"], 50] select 0;
+_buildingCfg = missionConfigFile >> "CfgBuildings" >> worldName >> str (playerSide);
+_authorizedPos = getArray (_buildingCfg >> typeOf (_building) >> "authorizedPos");
+_spawnPos = (_building buildingPos (selectRandom _authorizedPos));
 player setPosATL _spawnPos;
 player setDir (getDir _building);
