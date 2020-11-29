@@ -117,13 +117,13 @@ class CfgPlayerEquipment
 			class weapons
 			{
 				weaponItems[] = { "arifle_SPAR_01_khk_F", "", "hgun_P07_khk_F" };
-				accessoriesItems[] = {{ "muzzle_snds_m_khk_F", "optic_Hamr_khk_F", "30Rnd_556x45_Stanag_Traver_Red", "bipod_01_F_khk" }, { "" }, { "muzzle_snds_L", "16Rnd_9x21_Mag" }};
+				accessoriesItems[] = {{ "muzzle_snds_m_khk_F", "optic_Hamr_khk_F", "30Rnd_556x45_Stanag_Tracer_Red", "bipod_01_F_khk" }, { "" }, { "muzzle_snds_L", "16Rnd_9x21_Mag" }};
 			};
 
 			class equipments
 			{
 				uniformItems[] = {{ "FirstAidKit", 2 }};
-				vestItems[] = {{ "30Rnd_556x45_Stanag_Traver_Red", 5 }, { "16Rnd_9x21_Mag", 3 }};
+				vestItems[] = {{ "30Rnd_556x45_Stanag_Tracer_Red", 5 }, { "16Rnd_9x21_Mag", 3 }};
 				backpackItems[] = {{}};
 			};
 		};
@@ -143,13 +143,13 @@ class CfgPlayerEquipment
 			class weapons
 			{
 				weaponItems[] = { "arifle_SPAR_01_GL_khk_F", "", "hgun_P07_khk_F" };
-				accessoriesItems[] = {{ "muzzle_snds_m_khk_F", "optic_Hamr_khk_F", "30Rnd_556x45_Stanag_Traver_Red", "bipod_01_F_khk" }, { "" }, { "muzzle_snds_L", "16Rnd_9x21_Mag" }};
+				accessoriesItems[] = {{ "muzzle_snds_m_khk_F", "optic_Hamr_khk_F", "30Rnd_556x45_Stanag_Tracer_Red", "bipod_01_F_khk", "1Rnd_HE_Grenade_shell" }, { "" }, { "muzzle_snds_L", "16Rnd_9x21_Mag" }};
 			};
 
 			class equipments
 			{
 				uniformItems[] = {{ "FirstAidKit", 2 }};
-				vestItems[] = {{ "30Rnd_556x45_Stanag_Traver_Red", 5 }, { "1Rnd_HE_Grenade_shell", 3 }, { "16Rnd_9x21_Mag", 3 }};
+				vestItems[] = {{ "30Rnd_556x45_Stanag_Tracer_Red", 5 }, { "1Rnd_HE_Grenade_shell", 2 }, { "16Rnd_9x21_Mag", 3 }};
 				backpackItems[] = {{ "ATMine_Range_MAg", 1 }, { "SatchelCharge_Remote_Mag", 1 }};
 			};
 		};
@@ -169,14 +169,14 @@ class CfgPlayerEquipment
 			class weapons
 			{
 				weaponItems[] = { "arifle_SPAR_02_khk_F", "", "hgun_P07_khk_F" };
-				accessoriesItems[] = {{ "muzzle_snds_m_khk_F", "optic_Hamr_khk_F", "150Rnd_556x45_Drum_Mag", "bipod_01_F_khk" }, { "" }, { "muzzle_snds_L", "16Rnd_9x21_Mag" }};
+				accessoriesItems[] = {{ "muzzle_snds_m_khk_F", "optic_Hamr_khk_F", "150Rnd_556x45_Drum_Mag_F", "bipod_01_F_khk" }, { "" }, { "muzzle_snds_L", "16Rnd_9x21_Mag" }};
 			};
 
 			class equipments
 			{
 				uniformItems[] = {{ "FirstAidKit", 2 }};
 				vestItems[] = {{ "16Rnd_9x21_Mag", 3 }};
-				backpackItems[] = {{ "150Rnd_556x45_Drum_Mag", 1 }};
+				backpackItems[] = {{ "150Rnd_556x45_Drum_Mag_F", 1 }};
 			};
 		};
 
@@ -185,7 +185,7 @@ class CfgPlayerEquipment
 			class gears
 			{
 				uniform = "U_B_T_Sniper_F";
-				vest = "V_TacChestytig_grn_F";
+				vest = "V_TacChestrig_grn_F";
 				backpack = "";
 				headGear  = "H_HelmetB_Enh_tna_F";
 				goggles = "G_Balaclava_oli";
