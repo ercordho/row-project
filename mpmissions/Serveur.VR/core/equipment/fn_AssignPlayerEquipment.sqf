@@ -18,14 +18,13 @@ private
 	"_loadout"
 ];
 
-_playerEquipmentCfg = missionConfigFile >> "CfgPlayerEquipment" >> str (playerSide) >> perk;
-
-// Vérifier si la config existe
-
 _newPerk = _this select 0;
 if (!(perk isEqualTo _newPerk)) then { perk = _newPerk; };
 
+_playerEquipmentCfg = missionConfigFile >> "CfgPlayerEquipment" >> str (playerSide) >> perk;
+
 [] call row_client_fnc_CleanPlayerEquipment;
-_loadout = [_playerEquipmentCfg] call row_client_row_fnc_AssignPlayerGears;
-[] call row_client_fnc_AssignPlayerWeapons;
+
+_loadout = [_playerEquipmentCfg] call row_client_fnc_AssignPlayerGears;
+[_playerEquipmentCfg] call row_client_fnc_AssignPlayerWeapons;
 [_playerEquipmentCfg, _loadout] call row_client_fnc_AssignPlayerItems;

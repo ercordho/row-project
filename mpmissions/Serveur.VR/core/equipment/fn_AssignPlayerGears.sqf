@@ -12,7 +12,8 @@
 /*   Assigns gears to the player.                                             */
 /* ************************************************************************** */
 
-private [
+private
+[
 	"_playerEquipmentCfg",
 	"_loadout"
 ];

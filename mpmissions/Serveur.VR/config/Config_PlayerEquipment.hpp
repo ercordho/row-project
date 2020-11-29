@@ -101,6 +101,110 @@ class CfgPlayerEquipment
 				backpackItems[] = {{ "FirstAidKit", 2 }};
 			};
 		};
+
+		class soldier
+		{
+			class gears
+			{
+				uniform = "U_B_T_Soldier_F";
+				vest = "V_PlateCarrierSpec_tna_F";
+				backpack = "B_AssaultPack_tna_F";
+				headGear  = "H_HelmetB_Enh_tna_F";
+				goggles = "G_Balaclava_oli";
+				items[] = { "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles_tna_F" };
+			};
+
+			class weapons
+			{
+				weaponItems[] = { "arifle_SPAR_01_khk_F", "", "hgun_P07_khk_F" };
+				accessoriesItems[] = {{ "muzzle_snds_m_khk_F", "optic_Hamr_khk_F", "30Rnd_556x45_Stanag_Traver_Red", "bipod_01_F_khk" }, { "" }, { "muzzle_snds_L", "16Rnd_9x21_Mag" }};
+			};
+
+			class equipments
+			{
+				uniformItems[] = {{ "FirstAidKit", 2 }};
+				vestItems[] = {{ "30Rnd_556x45_Stanag_Traver_Red", 5 }, { "16Rnd_9x21_Mag", 3 }};
+				backpackItems[] = {{}};
+			};
+		};
+
+		class sapper
+		{
+			class gears
+			{
+				uniform = "U_B_T_Soldier_F";
+				vest = "V_PlateCarrierSpec_tna_F";
+				backpack = "B_AssaultPack_tna_F";
+				headGear  = "H_HelmetB_Enh_tna_F";
+				goggles = "G_Balaclava_oli";
+				items[] = { "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles_tna_F" };
+			};
+
+			class weapons
+			{
+				weaponItems[] = { "arifle_SPAR_01_GL_khk_F", "", "hgun_P07_khk_F" };
+				accessoriesItems[] = {{ "muzzle_snds_m_khk_F", "optic_Hamr_khk_F", "30Rnd_556x45_Stanag_Traver_Red", "bipod_01_F_khk" }, { "" }, { "muzzle_snds_L", "16Rnd_9x21_Mag" }};
+			};
+
+			class equipments
+			{
+				uniformItems[] = {{ "FirstAidKit", 2 }};
+				vestItems[] = {{ "30Rnd_556x45_Stanag_Traver_Red", 5 }, { "1Rnd_HE_Grenade_shell", 3 }, { "16Rnd_9x21_Mag", 3 }};
+				backpackItems[] = {{ "ATMine_Range_MAg", 1 }, { "SatchelCharge_Remote_Mag", 1 }};
+			};
+		};
+
+		class machineGunner
+		{
+			class gears
+			{
+				uniform = "U_B_T_Soldier_F";
+				vest = "V_PlateCarrierSpec_tna_F";
+				backpack = "B_AssaultPack_tna_F";
+				headGear  = "H_HelmetB_Enh_tna_F";
+				goggles = "G_Balaclava_oli";
+				items[] = { "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles_tna_F" };
+			};
+
+			class weapons
+			{
+				weaponItems[] = { "arifle_SPAR_02_khk_F", "", "hgun_P07_khk_F" };
+				accessoriesItems[] = {{ "muzzle_snds_m_khk_F", "optic_Hamr_khk_F", "150Rnd_556x45_Drum_Mag", "bipod_01_F_khk" }, { "" }, { "muzzle_snds_L", "16Rnd_9x21_Mag" }};
+			};
+
+			class equipments
+			{
+				uniformItems[] = {{ "FirstAidKit", 2 }};
+				vestItems[] = {{ "16Rnd_9x21_Mag", 3 }};
+				backpackItems[] = {{ "150Rnd_556x45_Drum_Mag", 1 }};
+			};
+		};
+
+		class sniper
+		{
+			class gears
+			{
+				uniform = "U_B_T_Sniper_F";
+				vest = "V_TacChestytig_grn_F";
+				backpack = "";
+				headGear  = "H_HelmetB_Enh_tna_F";
+				goggles = "G_Balaclava_oli";
+				items[] = { "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "ItemGPS", "NVGoggles_tna_F" };
+			};
+
+			class weapons
+			{
+				weaponItems[] = { "arifle_SPAR_03_khk_F", "", "hgun_P07_khk_F" };
+				accessoriesItems[] = {{ "muzzle_snds_B_khk_F", "optic_SOS_khk_F", "20Rnd_762x51_Mag", "bipod_01_F_khk" }, { "" }, { "muzzle_snds_L", "16Rnd_9x21_Mag" }};
+			};
+
+			class equipments
+			{
+				uniformItems[] = { { "FirstAidKit", 2 }};
+				vestItems[] = {{ "20Rnd_762x51_Mag", 5 }, { "16Rnd_9x21_Mag", 3 }};
+				backpackItems[] = {{}};
+			};
+		};
 	};
 
 	class east

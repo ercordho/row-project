@@ -12,7 +12,8 @@
 /*   Assigns items to the player.                                             */
 /* ************************************************************************** */
 
-private [
+private
+[
 	"_playerEquipmentCfg",
 	"_loadout"
 ];
