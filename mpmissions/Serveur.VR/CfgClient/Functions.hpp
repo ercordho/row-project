@@ -38,6 +38,12 @@ class Row_Client
 		class SetMapPos{};
 	};
 
+	class Row_Survival
+	{
+		file = "core\survival";
+		class Survival{};
+	};
+
 	class Row_Utilities
 	{
 		file = "core\utilities";
