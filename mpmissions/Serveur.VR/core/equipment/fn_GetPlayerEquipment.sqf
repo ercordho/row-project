@@ -1,6 +1,5 @@
 private
 [
-	"_playerEquipmentCfg",
 	"_gears",
 	"_weapons"
 ];
@@ -10,10 +9,10 @@ _gears = [uniform player, vest player, backpack player, headgear player, goggles
 
 /* W E A P O N S */
 _weapons = [];
-_weaponsCfg = [];
 _playerWeapons = [primaryWeapon player, secondaryWeapon player, handgunWeapon player];
 for "_i" from 0 to ( count (_playerWeapons) - 1) do
 {
+	_weaponsCfg = [];
 	_weapon = (_playerWeapons select _i);
 	_weaponsCfg pushback _weapon;
 	_content = switch (_i) do
@@ -35,31 +34,6 @@ for "_i" from 0 to ( count (_playerWeapons) - 1) do
 	_weaponsCfg pushBack (player weaponAccessories _weapon);
 	_weapons pushBack _weaponsCfg;
 };
-
-
-hint format ["%1", _weapons];
-
-
-
-
-
-
-
-
-/*
-for "_i" from 0 to (count (_weapons) - 1) do
-{
-	_cfg = [];
-	_cfg pushBack (_weapons select _i);
-	_weaponAccessories = (player weaponAccessories (_weapons select _i));
-	for "_j" from 0 to (count (_weaponAccessories) - 2) do
-	{
-		_cfg pushBack (_weaponAccessories select _j);
-	};
-	_cfg pushBack (_weaponAccessories select 3);
-};
-*/
-// _weapons = weaponsItems player;
 
 /*************/
 
