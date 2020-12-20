@@ -10,6 +10,7 @@ class Row_Client
 		class AssignPlayerItems{};
 		class AssignPlayerWeapons{};
 		class CleanPlayerEquipment{};
+		class GetPlayerEquipment{};
 		class SavePlayerEquipment{};
 	};
 

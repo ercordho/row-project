@@ -22,6 +22,8 @@ private
 	"_spawnPos"
 ];
 
+if (firstLife isEqualTo false) then { firstLife = true; };
+
 _index = lnbCurSelRow ((findDisplay 42000) displayCtrl 42003);
 closeDialog 0;
 
