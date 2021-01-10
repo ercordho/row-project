@@ -1,3 +1,7 @@
+/*
+	Penser à appeler la fonction avec spawn et non call sinon le sleep marche pas mdr
+*/
+
 private
 [
 	"_cfgSurvival",
